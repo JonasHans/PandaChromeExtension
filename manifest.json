@@ -1,0 +1,25 @@
+{
+  "manifest_version": 2,
+  "name": "Panda",
+  "version": "0.1",
+  "browser_action":{
+  		"default_icon": "panda.png"
+  	},
+
+  "content_scripts": [
+  	{
+  		"matches": [
+  			"http://www.sparknotes.com/*"
+  		],
+  		"js": ["utils/node_modules/jquery/dist/jquery.min.js","js/sparknotes.js"]
+  	},
+
+	{
+		"matches": [
+			"http://localhost:8080/odm/login.xhtml"
+		],
+		"js": ["utils/node_modules/jquery/dist/jquery.min.js","js/omnimap.js"]
+
+	}			
+  ]
+}
