@@ -1,9 +1,11 @@
 var SparkNotesCleaner = function (){
 
-	// Spam blog posts on the sidebar
 	var blogFeatureClass = ".blog-feature",
 		middleColumnClass = ".col-mid",
-		leftMenuClass = ".left-menu";
+		leftMenuClass = ".left-menu",
+		mainfooterClass = ".main-footer-container",
+		moreHelpClass = ".more-help",
+		readersNotesClass = ".containerUGC";
 
 	return {
 		logging: true,
@@ -11,15 +13,18 @@ var SparkNotesCleaner = function (){
 		init: function(logging){
 			console.clear()
 
-			this.clearRightSidebar();
+			this.clearDistractions();
 			console.log("Cleared spam! --- Panda")
 
 			this.fitSummary();
 			console.log("Fitted summary in screen --- Panda")
 		},
 
-		clearRightSidebar: function(){
+		clearDistractions: function(){
 			$(blogFeatureClass).empty();
+			$(mainfooterClass).empty();
+			$(moreHelpClass).empty();
+			$(readersNotesClass).empty();
 		},
 
 		fitSummary: function(){

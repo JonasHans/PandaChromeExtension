@@ -1,7 +1,14 @@
 {
   "manifest_version": 2,
   "name": "Panda",
-  "version": "0.1",
+  "version": "0.2",
+  "author": "Jonas van Oenen",
+  "description": "Panda makes all your pages more zen!",
+  "icons": {
+  		"16" : "panda.png",
+  		"48" : "panda.png",
+  		"128" : "panda.png"
+  	},
   "browser_action":{
   		"default_icon": "panda.png"
   	},
